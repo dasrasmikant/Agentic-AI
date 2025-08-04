@@ -1,0 +1,2 @@
+E:\Rasmikant\projects\2025\analyst-agent\backend2\static\crew_chart_be3e62e7-6b9f-4307-b8c7-3de76f7228a9\chart_code.py:23: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+  df['Transcation_Date'] = pd.to_datetime(df['Transcation_Date'])
