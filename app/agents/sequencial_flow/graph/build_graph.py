@@ -21,3 +21,15 @@ def build_email_graph():
 
     graph = builder.compile()
     return graph
+
+def invoke_graph(raw_email, tone):
+    graph = build_email_graph() 
+
+    initial_state = {
+        "raw_email": raw_email,
+        "tone": tone
+        }
+
+    # Run the graph
+    final_output = graph.invoke(initial_state)
+    return final_output

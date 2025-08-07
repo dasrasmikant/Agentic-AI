@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.v1.endpoints import chatResponse,data_analysis,cube_query_api
+from app.api.v1.endpoints import chatResponse,data_analysis,cube_query_api,langgraph_agent
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -9,6 +9,7 @@ app = FastAPI()
 app.include_router(chatResponse.router)
 app.include_router(data_analysis.router)
 app.include_router(cube_query_api.router)
+app.include_router(langgraph_agent.router)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 app.add_middleware(
     CORSMiddleware,
