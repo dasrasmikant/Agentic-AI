@@ -42,3 +42,15 @@ def build_idea_graph():
 
     graph = builder.compile()
     return graph
+
+def invoke_graph(topic):
+    workflow = build_idea_graph() 
+
+    initial_state = {
+    "topic": topic
+    }
+
+
+    # Run the graph
+    final_output = workflow.invoke(initial_state)
+    return final_output
